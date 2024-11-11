@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a responsividade do site em dispositivos móveis -->
+    <title>INICIO</title> <!-- Inicio da Primeira página-->
+    <link rel="stylesheet" href="Style.css"> <!-- Link para o arquivo CSS personalizado -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Link para os ícones do Font Awesome -->
+</head>
+<body class="light-mode"> <!-- Classe padrão do body para o modo claro -->
+
+    <!-- Menu do site, parte superior da página -->
+    <nav class="menu"> 
+        <ul>
+            <li><a href="index.html">Home</a></li> <!-- Link para a página inicial -->
+            <li><a href="produtos.html">Produtos/Serviços</a></li> <!-- Link para a página de produtos ou serviços -->
+            <li><a href="contato.html">Contato</a></li> <!-- Link para a página de contato -->
+            <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre a empresa -->
+            <li><button id="toggle-mode" onclick="toggleMode()">🌙</button></li> <!-- Botão para alternar o modo (claro/escuro) -->
+        </ul>
+    </nav> <!-- Fim do menu -->
+
+    <!-- Parte do banner, onde terá três imagens (carrossel) -->
+    <section class="banner">
+        <img src="banner01.jpeg" alt="Banner Promocional" class="active"> <!-- Imagem ativa do carrossel -->
+        <img src="banner02.jpeg" alt="Banner Promocional 2"> <!-- Segunda imagem do carrossel -->
+        <img src="banner03.jpeg" alt="Banner Promocional 3"> <!-- Terceira imagem do carrossel -->
+
+        <!-- Botões de navegação do carrossel -->
+        <button class="nav-button left" onclick="previousBanner()">&#10094;</button> <!-- Botão para imagem anterior -->
+        <button class="nav-button right" onclick="nextBanner()">&#10095;</button> <!-- Botão para próxima imagem -->
+
+        <!-- Indicadores do carrossel -->
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span> <!-- Indicador da primeira imagem -->
+            <span class="dot" onclick="currentSlide(1)"></span> <!-- Indicador da segunda imagem -->
+            <span class="dot" onclick="currentSlide(2)"></span> <!-- Indicador da terceira imagem -->
+        </div>
+        <script src="JAVASCRIPT.js"></script> <!-- Link para o arquivo JavaScript que controla o carrossel -->
+    </section> <!-- Fim do banner -->
+     
+    <!-- Inicia a seção de produtos que serão ofertados no site -->
+    <section class="conteudo">
+        <h2>PRODUTOS</h2> <!-- Título da seção de produtos -->
+        <div class="produtos"> <!-- Container para os produtos -->
+            <!-- Produto 1 -->
+            <div class="produto">
+                <img src="blusa01.webp" alt="Produto 1"> <!-- Imagem do produto -->
+                <h3>BLUSA TERMICA</h3> <!-- Nome do produto -->
+                <p>Busa UV 50+</p> <!-- Descrição do produto -->
+                <p>Preço: R$ 60,90</p> <!-- Preço do produto -->
+                <label for="tamanho-produto1">Tamanho:</label> <!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto1" name="tamanho-produto1"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option><!--Tamanho Produto --> 
+                    <option value="G">G</option><!--Tamanho Produto --> 
+                    <option value="GG">GG</option><!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra que redireciona para WhatsApp -->
+            </div>
+            <!-- Produto 2 -->
+            <div class="produto">
+                <img src="coller.webp" alt="Produto 2"> <!-- Imagem do produto -->
+                <h3>COLLER</h3> <!-- Nome do produto -->
+                <p>Coller Medio, cor azul.</p> <!-- Descrição do produto -->
+                <p>Preço: R$ 80,00</p> <!-- Preço do produto -->
+                <label for="tamanho-produto2">Tamanho:</label> <!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto2" name="tamanho-produto2"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 3 -->
+            <div class="produto">
+                <img src="maiofl.jpg" alt="Produto 3"> <!-- Imagem do produto -->
+                <h3>Maiô Feminino</h3> <!-- Nome do produto -->
+                <p>Maiô Floral</p> <!-- Descrição do produto -->
+                <p>Preço: R$ 120,00</p> <!-- Preço do produto -->
+                <label for="tamanho-produto3">Tamanho:</label> <!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto3" name="tamanho-produto3"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 4 -->
+            <div class="produto">
+                <img src="maioinfantil.jpg" alt="Produto 4"> <!-- Imagem do produto -->
+                <h3>Maiô Infantil Feminino</h3> <!-- Nome do produto -->
+                <p>Manga Longa Proteção UV 50+.</p> <!-- Descrição do produto -->
+                <p>Preço: R$ 55,00</p> <!-- Preço do produto -->
+                <label for="tamanho-produto4">Tamanho:</label> <!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto4" name="tamanho-produto4"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 5 -->
+            <div class="produto">
+                <img src="conjuntopraia.jpg" alt="Produto 5"> <!-- Imagem do produto -->
+                <h3>Conjunto Masculino Adulto</h3> <!-- Nome do produto -->
+                <p>Conjunto Sunga Boxer UV50+</p> <!-- Descrição do produto -->
+                <p>Preço: R$ 70,00</p> <!-- Preço do produto -->
+                <label for="tamanho-produto5">Tamanho:</label> <!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto5" name="tamanho-produto5"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 6 -->
+            <div class="produto">
+                <img src="conjunpraiainfantil.jpg" alt="Produto 6"> <!-- Imagem do produto -->
+                <h3>Conjunto Maculino Infantil</h3> <!-- Nome do produto -->
+                <p>Conjunto Sunga Boxer infantil UV50+</p> <!-- Descrição do produto -->
+                <p>Preço: R$ 85,90</p> <!-- Preço do produto -->
+                <label for="tamanho-produto6">Tamanho:</label> <!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto6" name="tamanho-produto6"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+        </div> <!-- Fim do container de produtos -->
+    </section> <!-- Fim da seção de produtos -->
+
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-media"> <!-- Seção de redes sociais -->
+                <h4>Siga-nos</h4> <!-- Título da seção de redes sociais -->
+                <a href="https://www.instagram.com/kleber.ttorres" target="_blank" class="social-link"> <!-- Link para Instagram -->
+                    <i class="fab fa-instagram"></i> <!-- Ícone do Instagram -->
+                </a>
+                <a href="https://www.facebook.com/klebertorres" target="_blank" class="social-link"> <!-- Link para Facebook -->
+                    <i class="fab fa-facebook-f"></i> <!-- Ícone do Facebook -->
+                </a>
+                <a href="https://wa.me/5581993995457" target="_blank" class="social-link"> <!-- Link para WhatsApp -->
+                    <i class="fab fa-whatsapp"></i> <!-- Ícone do WhatsApp -->
+                </a>
+            </div> <!-- Fim da seção de redes sociais -->
+        </div> <!-- Fim do container do rodapé -->
+    </footer> <!-- Fim do rodapé -->
+</body>
+</html>

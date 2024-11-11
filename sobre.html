@@ -1,0 +1,99 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a responsividade do site em dispositivos móveis -->
+    <title>INICIO</title> <!-- Inicio da Página Sobre-->
+    <link rel="stylesheet" href="Style.css"> <!-- Link para o arquivo CSS para estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Link para a biblioteca de ícones Font Awesome -->
+</head>
+<body class="light-mode"> <!-- Classe padrão do body para o modo claro -->
+    
+    <nav class="menu"> <!-- Início do menu de navegação -->
+        <ul> <!-- Lista não ordenada para os itens do menu -->
+            <li><a href="index.html">Home</a></li> <!-- Link para a página inicial -->
+            <li><a href="produtos.html">Produtos/Serviços</a></li> <!-- Link para a página de produtos/serviços -->
+            <li><a href="contato.html">Contato</a></li> <!-- Link para a página de contato -->
+            <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
+            <li><button id="toggle-mode" onclick="toggleMode()">🌙</button></li> <!-- Botão para alternar o modo -->
+        </ul>
+    </nav> <!-- Fim do menu de navegação -->
+
+    <section class="banner"> <!-- Seção do banner -->
+        <img src="banner01.jpeg" alt="Banner Promocional" class="active"> <!-- Imagem ativa do banner -->
+        <img src="banner02.jpeg" alt="Banner Promocional 2"> <!-- Segunda imagem do banner -->
+        <img src="banner03.jpeg" alt="Banner Promocional 3"> <!-- Terceira imagem do banner -->
+
+        <!-- Botões de navegação para mudar as imagens do banner -->
+        <button class="nav-button left" onclick="previousBanner()">&#10094;</button> <!-- Botão para a imagem anterior -->
+        <button class="nav-button right" onclick="nextBanner()">&#10095;</button> <!-- Botão para a próxima imagem -->
+
+        <div class="dots"> <!-- Contêiner para os indicadores de navegação (pontos) -->
+            <span class="dot active" onclick="currentSlide(0)"></span> <!-- Ponto para a primeira imagem -->
+            <span class="dot" onclick="currentSlide(1)"></span> <!-- Ponto para a segunda imagem -->
+            <span class="dot" onclick="currentSlide(2)"></span> <!-- Ponto para a terceira imagem -->
+        </div>
+        <script src="JAVASCRIPT.js"></script> <!-- Link para o arquivo JavaScript -->
+    </section> <!-- Fim da seção do banner -->
+
+    <section class="conteudo"> <!-- Seção principal que contém a descrição da loja e a história -->
+        <div class="descricao"> <!-- Contêiner para a descrição da loja -->
+            <h2>Sobre a Summer Storys</h2> <!-- Título da seção sobre a loja -->
+            <p> <!-- Parágrafo explicando a missão da loja -->
+                A SUMMER STORYS nasceu em 2020 com a missão de oferecer roupas adultas e infantis que combinam conforto, estilo e qualidade. 
+                Fundada por amigos que gostavam do verão e de curti uma praia, nossa empresa se dedica a trazer as últimas tendências 
+                da moda infantil e adulta, com qualidade e bom preço. Desde nosso início, acreditamos que cada peça de 
+                roupa que oferecemos deve não apenas vestir, mas também proporcionar confiança e alegria para cada pessoa que a usa, aproveitando
+                ao máximo o momento de lazer.
+            </p>
+            <p> <!-- Parágrafo sobre a expansão da loja -->
+                Com o tempo, expandimos nossa seleção para incluir acessórios e utensílios para o verão, e hoje somos referência 
+                em roupas e acessórios que acompanham os melhores momentos em familia. Venha nos conhecer e descubra 
+                porque somos a escolha de tantas famílias em todo o Brasil.
+            </p>
+        </div>
+
+        <div class="historia"> <!-- Contêiner para a história da loja -->
+            <h3>Nossa História</h3> <!-- Título da seção de história -->
+            
+            <section class="banner img"> <!-- Seção do banner para a história -->
+                <img src="imagem1.png.jpg" alt="Banner Promocional" class="active"> <!-- Imagem do banner da história -->
+            </section>
+            <h4>Fundação da LOJA</h4> <!-- Subtítulo sobre a fundação da loja -->
+            <p>Em 2020, a LOJA foi fundada com a visão de oferecer roupas infantis e adultas que valorizam o conforto e o estilo durante o momento de lazer.</p> <!-- Parágrafo sobre a fundação -->
+            
+            <section class="banner img"> <!-- Seção do banner para a coleção -->
+                <img src="coleção2025.jpeg" alt="Banner Promocional" class="active"> <!-- Imagem do banner da coleção -->
+            </section>
+            <h4>Coleção de 2025</h4> <!-- Subtítulo sobre a coleção de 2025 -->
+            <p>Nossa primeira coleção foi um grande sucesso, trazendo novidades e tendências para as crianças,
+                agora inovamos, estilo adulto e para todas as idades, acompanhe nossa nova coleção.
+            </p> <!-- Parágrafo sobre a coleção de 2025 -->
+            
+            <section class="banner img"> <!-- Seção do banner -->
+                <img src="imagem2.jpg" alt="Banner Promocional" class="active"> <!-- Imagem do banner-->
+            </section>
+            <h4>Primeiros Clientes</h4> <!-- Integrantes responsáveis pelo Projeto -->
+            <p>Com a abertura da loja, tivemos o prazer de receber nossos primeiros clientes.</p> <!-- Foto do Grupo-->
+        </div>
+    </section> <!-- Fim da seção de conteúdo -->
+
+    <!-- Rodapé da página -->
+    <footer class="footer"> <!-- Início do rodapé -->
+        <div class="footer-container"> <!-- Contêiner para o conteúdo do rodapé -->
+            <div class="social-media"> <!-- Seção de redes sociais -->
+                <h4>Siga-nos</h4> <!-- Título da seção de redes sociais -->
+                <a href="https://www.instagram.com/kleber.ttorres" target="_blank" class="social-link"> <!-- Link para Instagram -->
+                    <i class="fab fa-instagram"></i> <!-- Ícone do Instagram -->
+                </a>
+                <a href="https://www.facebook.com/klebertorres" target="_blank" class="social-link"> <!-- Link para Facebook -->
+                    <i class="fab fa-facebook-f"></i> <!-- Ícone do Facebook -->
+                </a>
+                <a href="https://wa.me/5581993995457" target="_blank" class="social-link"> <!-- Link para WhatsApp -->
+                    <i class="fab fa-whatsapp"></i> <!-- Ícone do WhatsApp -->
+                </a>
+            </div>
+        </div>
+    </footer> <!-- Fim do rodapé -->
+</body>
+</html>

@@ -1,0 +1,309 @@
+/* Definição de margem e linguagem do HTML e CSS */
+* {
+    font-family: 'Times New Roman'; /* Define a fonte Times New Roman para todos os elementos */
+}
+body, html {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    background-color: #f4f4f4; /* Cor de fundo padrão */
+}
+
+body.light-mode {
+    background-color: #ffffff; /* Fundo branco */
+    color: #000000; /* Texto preto */
+}
+
+/* Estilizando o banner para ocupar toda a largura da página */
+.banner {
+    width: 100%;
+    height: 300px; 
+    background-color: #f0f0f0; /* Cor do fundo do banner no modo claro */ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;  
+    position: relative; 
+}
+
+/* Posição, opacidade e transição dos banners */
+.banner img {
+    width: 100%;/* Define a largura para ocupar 100% do contêiner */
+    height: 100%;/* Define a altura para ocupar 100% do contêiner */
+    object-fit: cover;/* Ajusta a imagem para cobrir o contêiner sem distorcer */
+    position: absolute;/* Posiciona o elemento de forma absoluta em relação ao contêiner pai */
+    opacity: 0;  /* Define opacidade 0, deixando o elemento invisível */
+    transition: opacity 0.5s ease; /* Transição da opacidade */
+}
+
+.banner img.active {
+    display: block; /* Exibe a imagem ativa */
+    opacity: 1; /* Opacidade total da imagem ativa */
+}
+
+/* Estilizações do botão do banner */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo do botão */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+    transition: background-color 0.3s; /* Transição da cor de fundo */
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo ao passar o mouse */
+}
+
+/* Para botão à esquerda */
+.nav-button.left {
+    left: 20px; 
+}
+
+/* Para botão à direita */
+.nav-button.right {
+    right: 20px;
+}
+
+.dots {
+    text-align: center; /* Centraliza os pontos de navegação */
+    position: absolute;
+    bottom: 10px; /* Posição dos pontos na parte inferior */
+    width: 100%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* Cor padrão dos pontos */
+    border-radius: 50%; /* Formato circular */
+    display: inline-block; /* Exibe os pontos em linha */
+    cursor: pointer;
+    transition: background-color 0.6s; /* Transição da cor */
+}
+
+.dot.active {
+    background-color: rgba(255, 255, 255, 1); /* Cor ativa do ponto */
+}
+
+/* Menu da Página WEB */
+.menu {
+    color: #000; /* Cor dos links no modo claro */
+    padding: 10px 0; /* Espaçamento do menu */
+    font-family: 'Lobster', cursive; /* Fonte do menu */
+}
+
+.menu ul {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove preenchimento da lista */
+    display: flex; /* Exibe os itens em linha */
+    justify-content: center; /* Centraliza os itens */
+}
+
+/* Tamanho da tabela */
+.menu ul li {
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+    position: relative; 
+}
+
+.menu ul li a {
+    color: #000; /* Cor dos links no modo claro */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px; /* Tamanho da fonte dos links */
+    padding: 10px; /* Preenchimento interno */
+    transition: background-color 0.3s, transform 0.3s; /* Transição de cor e transformação */
+}
+
+.menu ul li a:hover {
+    background-color: #1ea2ca; /* Cor do fundo ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+
+/*inicio do conteudo das paginas*/
+.conteudo {
+    padding: 20px; /* Espaçamento da seção de conteúdo */
+    text-align: center; /* Centraliza o texto */
+    background-color: #f0f0f5; /* Cor de fundo suave */
+    padding: 40px; /* Espaçamento interno na seção */
+    border-radius: 8px; /* Borda arredondada */
+    max-width: 900px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: 'Times New Roman'; 
+}
+
+.descricao {
+    margin-bottom: 30px; /* Espaçamento inferior da descrição */
+}
+
+.produtos {
+    display: grid; /* Exibe os produtos em grid */
+    grid-template-columns: repeat(3, 1fr); /* Três colunas de produtos */
+    gap: 10px; /* Espaçamento entre os produtos */
+    margin: 0 20px; /* Margem lateral */
+    padding: 10px 0; /* Espaçamento superior e inferior */
+    
+}
+
+.produto {
+    background-color: white; /* Cor de fundo do produto */
+    padding: 15px; /* Preenchimento do produto */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto do produto */
+    
+}
+
+.produto img {
+    width: 200px; /* Largura da imagem do produto */
+    height: 200px; /* Altura da imagem do produto */
+}
+
+.produto select {
+    margin-top: 10px; /* Margem superior do seletor */
+    padding: 5px; /* Preenchimento do seletor */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda do seletor */
+}
+
+.btn-compra {
+    display: inline-block; /* Exibe como bloco inline */
+    margin-top: 10px; /* Margem superior */
+    padding: 10px 20px; /* Preenchimento do botão de compra */
+    background-color: #1ea2ca; /* Cor de fundo do botão */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição da cor de fundo */
+    font: arial;
+}
+
+.btn-compra:hover {
+    background-color: #ffff6a; /* Cor do botão ao passar o mouse */
+}
+/*Fim do conteudo*/
+
+/* Estilos para alinhar o formulário e localização lado a lado */
+.conteudo-contato {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos para o formulário de contato */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os campos do formulário */
+    width: 50%; /* Metade da largura */
+    background-color: #313131; /* Fundo branco no formulário */
+    padding: 20px; /* Espaçamento interno no formulário */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 2px 4px rgba(240, 238, 238, 0.1); /* Sombra leve */
+}
+
+#contact-form label {
+    font-weight: bold;
+    color: #fff8f8; /* Cor do texto dos rótulos */
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #1ea2ca; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #ffff6a; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilos para a seção de localização */
+.localizacao {
+    width: 50%; /* Metade da largura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #313131; /* Fundo branco para localização */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mapa-img {
+    width: 100%; /* Ajusta a imagem ao tamanho do contêiner */
+    border-radius: 8px;
+}
+
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: #ffffff; /* Cor do fundo do rodapé */
+    color: rgb(5, 5, 5); /* Cor do texto no rodapé */
+    padding: 20px 0; /* Espaçamento do rodapé */
+    text-align: center; /* Centraliza o texto no rodapé */
+    font-size: 14px; /* Tamanho da fonte no rodapé */
+    position: relative; /* Posição relativa para layout */
+    bottom: 0; /* Posiciona na parte inferior */
+    width: 100%; /* Largura total */
+}
+
+.footer-container {
+    display: flex; /* Exibe os elementos do rodapé em flex */
+    flex-direction: column; /* Coluna */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-around; /* Espaço entre os elementos */
+    max-width: 1200px; /* Largura máxima do rodapé */
+    margin: 0 auto; /* Centraliza o rodapé */
+    
+}
+
+.footer-container .contact-info {
+    margin: 10px 0; /* Margem vertical */
+}
+
+.footer h4  {
+    margin-bottom: 10px; /* Margem inferior do título */
+    font-size: 18px; /* Tamanho do título */
+    font-weight: bold; /* Negrito */
+}
+
+.social-link {
+    text-decoration: none; /* Remove o sublinhado */
+    color: rgb(0, 0, 0); /* Cor do texto dos links sociais */
+    margin: 0 15px; /* Margem lateral */
+    font-size: 30px; /* Tamanho dos ícones sociais */
+    transition: transform 0.3s; /* Transição ao passar o mouse */
+}
+
+.social-link:hover {
+    color: #1ea2ca; /* Altera a cor ao passar o mouse */
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.footer p {
+    margin: 5px 0; /* Margem vertical */
+}
+
+.footer-bottom {
+    border-top: 1px solid #444; /* Borda superior */
+    padding-top: 10px; /* Espaçamento superior */
+    margin-top: 20px; /* Margem superior */
+}
+
+

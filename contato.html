@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a responsividade do site em dispositivos móveis -->
+    <title>ENTRE EM CONTATO CONOSCO</title> <!-- Inicio da Página Contato-->
+    <link rel="stylesheet" href="Style.css"> <!-- Link para o arquivo CSS para estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Link para a biblioteca de ícones Font Awesome -->
+</head>
+<body class="light-mode"> <!-- Classe padrão do body para o modo claro -->
+
+    <nav class="menu"> <!-- Início do menu de navegação -->
+        <ul> <!-- Lista não ordenada para os itens do menu -->
+            <li><a href="index.html">Home</a></li> <!-- Link para a página inicial -->
+            <li><a href="produtos.html">Produtos/Serviços</a></li> <!-- Link para a página de produtos/serviços -->
+            <li><a href="contato.html">Contato</a></li> <!-- Link para a página de contato -->
+            <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
+            <li><button id="toggle-mode" onclick="toggleMode()">🌙</button></li> <!-- Botão para alternar o modo -->
+        </ul>
+    </nav> <!-- Fim do menu de navegação -->
+
+    <!-- Banner -->
+    <section class="banner"> <!-- Seção do banner -->
+        <img src="banner01.jpeg" alt="Banner Promocional" class="active"> <!-- Imagem ativa do banner -->
+        <img src="banner02.jpeg" alt="Banner Promocional 2"> <!-- Segunda imagem do banner -->
+        <img src="banner03.jpeg" alt="Banner Promocional 3"> <!-- Terceira imagem do banner -->
+
+        <!-- Botões de navegação para mudar as imagens do banner -->
+        <button class="nav-button left" onclick="previousBanner()">&#10094;</button> <!-- Botão para a imagem anterior -->
+        <button class="nav-button right" onclick="nextBanner()">&#10095;</button> <!-- Botão para a próxima imagem -->
+
+        <div class="dots"> <!-- Contêiner para os indicadores de navegação (pontos) -->
+            <span class="dot active" onclick="currentSlide(0)"></span> <!-- Ponto para a primeira imagem -->
+            <span class="dot" onclick="currentSlide(1)"></span> <!-- Ponto para a segunda imagem -->
+            <span class="dot" onclick="currentSlide(2)"></span> <!-- Ponto para a terceira imagem -->
+        </div>
+        <script src="JAVASCRIPT.js"></script> <!-- Link para o arquivo JavaScript -->
+    </section> <!-- Fim da seção do banner -->
+
+    <section class="conteudo"> <!-- Seção principal para o contato -->
+        <h2>ENTRE EM CONTATO CONOSCO</h2> <!-- Título da seção de contato -->
+        
+        <div class="conteudo-contato"> <!-- Novo contêiner para alinhar formulário e localização -->
+    
+            <form id="contact-form"> <!-- Formulário de contato -->
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+    
+            <section class="localizacao"> <!-- Seção sobre a localização da loja -->
+                    <div class="localizacao-mapa">
+                        <a href="https://maps.app.goo.gl/FK5Mmf4jdi3rATDbA" target="_blank">
+                            <img src="localiza.png" alt="Localização do Shopping Caruaru" class="mapa-img">
+                        </a>
+                    </div>
+                </div>
+            </section>
+    
+        </div> <!-- Fim do contêiner de alinhamento -->
+    </section>
+    
+
+    <!-- Rodapé da página -->
+    <footer class="footer"> <!-- Início do rodapé -->
+        <div class="footer-container"> <!-- Contêiner para o conteúdo do rodapé -->
+            <div class="social-media"> <!-- Seção de redes sociais -->
+                <h4>Siga-nos</h4> <!-- Título da seção de redes sociais -->
+                <a href="https://www.instagram.com/kleber.ttorres" target="_blank" class="social-link"> <!-- Link para Instagram -->
+                    <i class="fab fa-instagram"></i> <!-- Ícone do Instagram -->
+                </a>
+                <a href="https://www.facebook.com/klebertorres" target="_blank" class="social-link"> <!-- Link para Facebook -->
+                    <i class="fab fa-facebook-f"></i> <!-- Ícone do Facebook -->
+                </a>
+                <a href="https://wa.me/5581993995457" target="_blank" class="social-link"> <!-- Link para WhatsApp -->
+                    <i class="fab fa-whatsapp"></i> <!-- Ícone do WhatsApp -->
+                </a>
+            </div>
+        </div>
+    </footer> <!-- Fim do rodapé -->
+</body>
+</html>

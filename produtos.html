@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a responsividade do site em dispositivos móveis -->
+    <title>PRODUTOS</title><!--Inicio da Página PRodutos-->
+    <link rel="stylesheet" href="Style.css"> <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Link para ícones -->
+</head>
+<body class="light-mode"> <!-- Classe padrão do body para o modo claro -->
+    <!-- Menu do site -->
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li> <!--Link para a página inicial-->
+            <li><a href="produtos.html">Produtos/Serviços</a></li> <!--Link para a página de produtos-->
+            <li><a href="contato.html">Contato</a></li> <!--Link para a página de contato-->
+            <li><a href="sobre.html">Sobre</a></li> <!--Link para a página sobre-->
+            <li><button id="toggle-mode" onclick="toggleMode()">🌙</button></li> <!-- Botão para alternar o modo -->
+        </ul>
+    </nav>
+    
+    <!-- Seção do banner -->
+    <section class="banner">
+        <img src="banner01.jpeg" alt="Banner Promocional" class="active"> <!-- Imagem ativa -->
+        <img src="banner02.jpeg" alt="Banner Promocional 2">
+        <img src="banner03.jpeg" alt="Banner Promocional 3">
+
+        <button class="nav-button left" onclick="previousBanner()">&#10094;</button> <!-- Botão para o banner anterior -->
+        <button class="nav-button right" onclick="nextBanner()">&#10095;</button> <!-- Botão para o próximo banner -->
+
+        <div class="dots"> <!-- Indicadores do banner -->
+            <span class="dot active" onclick="currentSlide(0)"></span> <!-- Ponto para a primeira imagem -->
+            <span class="dot" onclick="currentSlide(1)"></span> <!-- Ponto para a segunda imagem -->
+            <span class="dot" onclick="currentSlide(2)"></span> <!-- Ponto para a terceira imagem -->
+        </div>
+        <script src="JAVASCRIPT.js"></script> <!--Script para funcionalidades do banner-->
+    </section>
+
+    <!-- Início da seção de produtos -->
+    <section class="conteudo">
+        <h2>PRODUTOS</h2> <!-- Título da seção de produtos -->
+        <div class="produtos"> <!--Div para os produtos-->
+            <!--Produto -->
+            <div class="produto">
+                <img src="brinquedo01.jpg" alt="Produto 1"> <!-- Imagem do produto-->
+                <h3>Regador Infantil</h3> <!--Nome do produto-->
+                <p>Brinquedo regador + pazinha.</p> <!--Descrição do produto-->
+                <p>Preço: R$ 85,00</p> <!--Preço do produto  -->
+                <br>
+                <label for="tamanho-produto1">Tamanho:</label> <!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto1" name="tamanho-produto1"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 2 -->
+            <div class="produto">
+                <img src="bolsainfantil01.jpg" alt="Produto 2"> <!-- Imagem do produto-->
+                <h3>Bolsa de Praia Personalizavel.</h3> <!--Nome do produto-->
+                <p>Bolsa de Praia infantil, Personalizavel.</p> <!--Descrição do produto-->
+                <p>Preço: R$ 40,00</p> <!--Preço do produto  -->
+                <br>
+                <label for="tamanho-produto1">Tamanho:</label><!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto1" name="tamanho-produto1"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 3 -->
+            <div class="produto">
+                <img src="oculos01.jpg" alt="Produto 3"> <!-- Imagem do produto-->
+                <h3>Oculos Escuro</h3> <!--Nome do produto-->
+                <p>Oculos Escuro Unisex.</p><!--Descrição do produto--> 
+                <p>Preço: R$ 75,00</p> <!--Preço do produto  -->
+                <br>
+                <label for="tamanho-produto1">Tamanho:</label><!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto1" name="tamanho-produto1">
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 4 -->
+            <div class="produto">
+                <img src="bone01.jpg" alt="Produto 4"> <!-- Imagem do produto-->
+                <h3>Boné</h3> <!--Nome do produto-->
+                <p>Chapéu Feminino Viseira Proteção.</p> <!--Descrição do produto-->
+                <p>Preço: R$ 35,00</p> <!--Preço do produto  -->
+                <br>
+                <label for="tamanho-produto1">Tamanho:</label><!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto1" name="tamanho-produto1"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 5 -->
+            <div class="produto">
+                <img src="boia01.jpg" alt="Produto 5"> <!-- Imagem do produto-->
+                <h3>Boia Infantil Feminina</h3> <!--Nome do produto-->
+                <p>Boia Cisne Perolado Rosa.</p> <!--Descrição do produto-->
+                <p>Preço: R$ 70,00</p><!--Preço do produto  --> 
+                <br>
+                <label for="tamanho-produto1">Tamanho:</label><!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto1" name="tamanho-produto1"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 6 -->
+            <div class="produto">
+                <img src="protetor01.jpg" alt="Produto 6"><!-- Imagem do produto-->
+                <h3>Protetor Solar Sundown</h3> <!--Nome do produto-->
+                <p>Protetor Solar, fator 70fps UVA+UVB.</p> <!--Descrição do produto-->
+                <p>Preço: R$ 70,00</p> <!--Preço do produto  -->
+                <br>
+                <label for="tamanho-produto1">Tamanho:</label><!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto1" name="tamanho-produto1"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+        </div>
+    </section>
+
+            <!-- Seção do banner (parece duplicado, considere remover se não necessário) -->
+            <section class="banner">
+                <img src="banner04.jpg" alt="Banner Promocional" class="active"> <!-- Imagem do banner 1 -->
+            </section>
+
+            <section class="conteudo">
+                <div class="produtos">
+            <!-- Produto 7 -->
+            <div class="produto">
+                <img src="boia02.jpg" alt="Produto 6"><!-- Imagem do produto-->
+                <h3>Boia spiderman</h3> <!--Nome do produto-->
+                <p>Boia inflável Masculina.</p> <!--Descrição do produto-->
+                <p>Preço: R$ 70,00</p> <!--Preço do produto  -->
+                <br>
+                <label for="tamanho-produto1">Tamanho:</label><!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto1" name="tamanho-produto1"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 8 -->
+            <div class="produto">
+                <img src="toalha01.jpg" alt="Produto 08"> <!-- Imagem do produto-->
+                <h3>Toalha de Banho</h3> <!--Nome do produto-->
+                <p>Toalha de Praia Martim.</p> <!--Descrição do produto-->
+                <p>Preço: R$ 60,00</p> <!--Preço do produto  -->
+                <br>
+                <label for="tamanho-produto1">Tamanho:</label><!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto1" name="tamanho-produto1"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+            <!-- Produto 9 -->
+            <div class="produto">
+                <img src="raquete.jpg" alt="Produto 9"> <!-- Imagem do produto-->
+                <h3>Raquete de Praia</h3> <!--Nome do produto-->
+                <p>Kit Duas Raquete + 4 Bolas.<!--Descrição do produto-->
+                <p>Preço: R$ 35,90</p> <!--Preço do produto  -->
+                <br>
+                <label for="tamanho-produto1">Tamanho:</label><!-- Rótulo para o seletor de tamanho -->
+                <select id="tamanho-produto1" name="tamanho-produto1"> <!-- Seletor de tamanhos -->
+                    <option value="P">P</option> <!--Tamanho Produto --> 
+                    <option value="M">M</option> <!--Tamanho Produto --> 
+                    <option value="G">G</option> <!--Tamanho Produto --> 
+                    <option value="GG">GG</option> <!--Tamanho Produto --> 
+                </select>
+                <br>
+                <a href="https://wa.me/5581993995457" class="btn-compra">Comprar</a> <!-- Botão de compra -->
+            </div>
+        </div> <!-- Fim da Div de produtos -->
+    </section> <!-- Fim da seção de produtos -->
+    
+    <!-- Rodapé da página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-media"> <!-- Seção de redes sociais -->
+                <h4>Siga-nos</h4> <!-- Título da seção de redes sociais -->
+                <a href="https://www.instagram.com/kleber.ttorres" target="_blank" class="social-link"> <!--Link para Instagram-->
+                    <i class="fab fa-instagram"></i> <!-- Ícone do Instagram -->
+                </a>
+                <a href="https://www.facebook.com/klebertorres" target="_blank" class="social-link"> <!--Link para Facebook-->
+                    <i class="fab fa-facebook-f"></i> <!-- Ícone do Facebook -->
+                </a>
+                <a href="https://wa.me/5581993995457" target="_blank" class="social-link"> <!--Link para WhatsApp-->
+                    <i class="fab fa-whatsapp"></i> <!--Ícone do WhatsApp-->
+                </a>
+            </div>
+        </div>
+    </footer> <!-- Fim do rodapé -->
+</body>
+</html>
